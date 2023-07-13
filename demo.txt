@@ -1,0 +1,24 @@
+https://www.convertapi.com/pdf-to-jpg
+
+// store -> to store pdfs along with name
+
+
+// Page1 -> Input and file uploader
+// Page2 -> Input and file uploader
+
+// page1 & page2 -> same component
+
+// page3 -> onload , make that api call with values stored in store 
+and show the result jpeg on the page
+ 
+
+
+// find out?
+- file uploader, only for pdf?
+- input type for the api given?
+- response type of the api given?
+
+
+secret api:
+YAq7nLoc8oQUeR5M
+
