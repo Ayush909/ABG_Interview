@@ -9,22 +9,26 @@ const Page3 = () => {
 
   useEffect(() => {
     console.log(filesDetails);
-    if (filesDetails.length) {
+    if (filesDetails) {
       setImages(filesDetails);
     }
   }, []);
 
   return (
     <div>
-      {images &&
-        images.map((img) => {
-          return (
-            <div>
-              <h2>{img.name}</h2>
-              <img className="images" src={img.url} alt={img.name} />
-            </div>
-          );
-        })}
+      {Object.entries(images).map(([name, urls]) => (
+        <div key={name}>
+          <h1>{name}</h1>
+          {urls.map((url, index) => (
+            <img
+              className="images"
+              key={index}
+              src={url}
+              alt={`Image ${index + 1}`}
+            />
+          ))}
+        </div>
+      ))}
     </div>
   );
 };

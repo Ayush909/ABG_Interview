@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ConvertApi from "convertapi-js";
 import { storePdf } from "../store/fileSlice";
 import "./FileUploader.css";
+import { useDispatch } from "react-redux";
 
 let convertApi = ConvertApi.auth("YAq7nLoc8oQUeR5M");
 const FileUploader = () => {

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  filesDetails: [],
+  filesDetails: {},
 };
 
 const pdfSlice = createSlice({
@@ -10,7 +10,13 @@ const pdfSlice = createSlice({
   reducers: {
     storePdf: (state, action) => {
       console.log(action);
-      state.filesDetails.push(action.payload);
+      const { name, url } = action.payload;
+      if (state.filesDetails[name]) {
+        state.filesDetails[name].push(url);
+      } else {
+        state.filesDetails[name] = [url];
+      }
+      // state.filesDetails.push(action.payload);
     },
   },
 });
