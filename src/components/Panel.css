@@ -1,0 +1,11 @@
+.panel__border {
+  border: 1px solid black;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
